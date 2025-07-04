@@ -20,7 +20,10 @@ const client = new Client({
 await client.connect();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://project-test-eta-henna.vercel.app/', // Replace this with your actual Vercel domain
+  credentials: true
+}));
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({

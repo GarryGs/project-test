@@ -13,7 +13,7 @@ function App() {
   };
 
   useEffect( () => {
-    axios.get("http://localhost:3000").then(
+    axios.get("https://project-test-a26q.onrender.com").then(
       response => {
         setQueryData(response.data)
     })
@@ -33,7 +33,7 @@ function App() {
           message: target.message.value,
       };
 
-      const response = await fetch('http://localhost:3000/api/contact', {
+      const response = await fetch('https://project-test-a26q.onrender.com/api/contact', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
