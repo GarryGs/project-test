@@ -14,7 +14,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const client = new Client({
-  connectionString: "postgresql://pl-db_owner:npg_NV2XtueGrd8y@ep-autumn-brook-a89jk5h4-pooler.eastus2.azure.neon.tech/pl-db?sslmode=require&channel_binding=require"
+  connectionString: "postgresql://QUERY%20RESOLVER_owner:npg_XQv1FOH0sanG@ep-withered-shadow-a1a7ao0i-pooler.ap-southeast-1.aws.neon.tech/QUERY%20RESOLVER?sslmode=require&channel_binding=require"
 })
 
 await client.connect();
@@ -45,7 +45,7 @@ const departmentEmailMap = {
 };
 
 app.get('/', (req, res) => {
-  client.query('SELECT * FROM queries', (err, results) => {
+  client.query('SELECT * FROM MANAGER', (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
     console.log(results.rows);
     res.json(results.rows);
