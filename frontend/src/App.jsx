@@ -86,7 +86,7 @@ function App() {
                   </svg>
 
                   <h1 className="mx-4 text-xl text-gray-700 dark:text-white">
-                    {queryDataSingle.query}
+                    {queryDataSingle.questions}
                   </h1>
                 </button>
 
@@ -94,7 +94,7 @@ function App() {
                   <div className="flex mt-8 md:mx-10">
                     <span className="border border-blue-500" />
                     <p className="max-w-3xl px-4 text-gray-500 dark:text-gray-300">
-                      {queryDataSingle.solution}
+                      {queryDataSingle.solutions}
                     </p>
                   </div>
                 )}
